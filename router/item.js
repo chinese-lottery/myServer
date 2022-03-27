@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const itemController =require("../controler/itemController")
+const itemController =require("../controler/item")
 
 router.get("", itemController.getAllItems)
 router.get("/:id", itemController.getItemById)
