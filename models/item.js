@@ -8,7 +8,5 @@ const itemSchema = new mongoose.Schema({
 
 const Item = mongoose.model("items", itemSchema);
 module.exports = {
-  //האם צריך ליצא גם את הסכמה? או מספיק רק את הטבלה
-  itemSchema,
   Item,
 };
