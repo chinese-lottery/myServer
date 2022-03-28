@@ -1,4 +1,4 @@
-// const User = require("../models/user").User;
+const User = require("../models/user").User;
 const Winning = require("../models/winning").Winning;
 
 const addwinning = async (req, res) => {
@@ -22,15 +22,15 @@ const getWinning = async (req, res) => {
     }
 }
 
-// const getAllUserById = async (req, res) => {
-//     try {
-//         let a = await User.find({}).populate(req);
-//         return res.send(a);
-//     }
-//     catch (e) {
-//         return res.status(400).send(e);
-//     }
-// }
+const getAllUserById = async (req, res) => {
+    try {
+        let a = await User.find({}).populate(req);
+        return res.send(a);
+    }
+    catch (e) {
+        return res.status(400).send(e);
+    }
+}
 
 const getWinningByIdOfItem = async (req, res) => {
     try {
@@ -44,6 +44,5 @@ const getWinningByIdOfItem = async (req, res) => {
 }
 
 module.exports = {
-    // getWinningByIdOfItem, getAllUserById, getWinning, addwinning 
-       getWinningByIdOfItem, getWinning, addwinning
+    getWinningByIdOfItem, getAllUserById, getWinning, addwinning
 }
